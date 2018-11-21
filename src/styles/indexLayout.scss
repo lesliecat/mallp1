@@ -1,0 +1,13 @@
+.main-wrapper{
+  width: 100%;
+  position: relative;
+  .tree-out-wrapper {
+    position: absolute;
+    height: 100%;
+    width: 30%;
+    border-right: 2px solid #eee;
+  }
+  .content-out-wrapper {
+    margin-left: 30%;
+  }
+}

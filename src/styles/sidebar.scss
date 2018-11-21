@@ -1,0 +1,60 @@
+#app {
+  // 主体区域
+  .main-container {
+    height: 100%;
+    transition: margin-left 0.3s;
+    margin-left: 180px;
+  }
+  // 侧边栏
+  .sidebar-container {
+    transition: width 0.3s;
+    width: 180px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1001;
+    .svg-icon {
+      margin-right: 16px;
+    }
+    .el-menu {
+      border: none;
+      width: 100%;
+      background-color: $subMenuBg !important;
+      .el-menu--popup{
+        padding: 0;
+      }
+    }
+  }
+  .hideSidebar {
+    .sidebar-container {
+      width: 64px;
+    }
+    .main-container {
+      margin-left: 64px;
+    }
+  }
+  .nest-menu .el-submenu > .el-submenu__title,
+  .el-submenu .el-menu-item {
+    min-width: 180px !important;
+    background-color: $subMenuBg !important;
+    &:hover {
+      background-color: $menuHover !important;
+    }
+  }
+}
+
+.el-menu--collapse > .menu-wrapper > .el-menu-item .el-submenu__icon-arrow,
+.el-menu--collapse > .menu-wrapper >.el-submenu > .el-submenu__title .el-submenu__icon-arrow {
+  display: none;
+}
+
+.el-menu--collapse > .menu-wrapper > .el-menu-item span,
+.el-menu--collapse > .menu-wrapper > .el-submenu > .el-submenu__title span {
+  height: 0;
+  width: 0;
+  overflow: hidden;
+  visibility: hidden;
+  display: inline-block;
+}
